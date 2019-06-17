@@ -29,6 +29,14 @@ const REGIONS = {
     LA2: 'LA2'
 }
 
+const RG_API_URL = (region, uri) => `https://${region}.api.riotgames.com/lol/${uri}`
+
+const API_ENDPOINTS = {
+    SUMMONER_URI: 'summoner/v4/summoners',
+    LEAGUE_URI: 'league/v4',
+    MATCH_URI: 'match/v4'
+}
+
 module.exports = {
-    RANKED, REGIONS
+    RANKED, REGIONS, RG_API_URL, API_ENDPOINTS
 }
