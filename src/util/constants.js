@@ -1,3 +1,11 @@
+const path = require('path');
+
+// import .env variables
+require('dotenv').config()
+
+const RG_API_KEY = process.env.RG_API_KEY
+const RG_TOKEN_KEY = 'X-Riot-Token'
+
 const RANKED = {
     QUEUE: {
         'SOLO_SR': 'RANKED_SOLO_5x5',
@@ -38,5 +46,5 @@ const API_ENDPOINTS = {
 }
 
 module.exports = {
-    RANKED, REGIONS, RG_API_URL, API_ENDPOINTS
+    RANKED, REGIONS, RG_API_URL, API_ENDPOINTS, RG_API_KEY, RG_TOKEN_KEY
 }
