@@ -6,6 +6,7 @@ const getLeaguesBySummonerId = async (summonerId = '', region = REGIONS.EUW1) =>
     const url = RG_API_URL(region, uri)
 
     const { data } = await axios.get(url)
+    return data
 }
 
 const getLeagues = async (queue = RANKED.QUEUE.SOLO_SR, tier = '', division = '', region = REGIONS.EUW1) => {
@@ -13,6 +14,7 @@ const getLeagues = async (queue = RANKED.QUEUE.SOLO_SR, tier = '', division = ''
     const url = RG_API_URL(region, uri)
 
     const { data } = await axios.get(url)
+    return data
 }
 
 const getMasterLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIONS.EUW1) => {
@@ -20,6 +22,7 @@ const getMasterLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIONS.EU
     const url = RG_API_URL(region, uri)
 
     const { data } = await axios.get(url)
+    return data
 }
 
 const getGrandMasterLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIONS.EUW1) => {
@@ -27,6 +30,7 @@ const getGrandMasterLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIO
     const url = RG_API_URL(region, uri)
 
     const { data } = await axios.get(url)
+    return data
 }
 
 const getChallengerLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIONS.EUW1) => {
@@ -34,6 +38,7 @@ const getChallengerLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGION
     const url = RG_API_URL(region, uri)
 
     const { data } = await axios.get(url)
+    return data
 }
 
 module.exports = {
