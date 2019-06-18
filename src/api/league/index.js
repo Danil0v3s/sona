@@ -1,4 +1,4 @@
-const { RG_API_URL, API_ENDPOINTS, REGIONS, RANKED } = require('../../util/constants')
+const { RG_API_URL, API_ENDPOINTS, REGIONS, RANKED } = require('../../config/constants')
 const { axios } = require('../')
 
 const getLeaguesBySummonerId = async (summonerId = '', region = REGIONS.EUW1) => {

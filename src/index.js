@@ -1,6 +1,14 @@
-const { getSummonerByName } = require('./api/summoner')
+Promise = require('bluebird')
+const { port, env } = require('./config/vars')
+const app = require('./config/express')
+const mongoose = require('./config/mongoose')
 
+mongoose.connect()
 
-getSummonerByName('Danilov3s').then(data => {
-    console.log(data)
-})
+app.listen(port, () => console.info(`Server has started on port ${port} (${env})`))
+
+/**
+* Exports express
+* @public
+*/
+module.exports = app;
