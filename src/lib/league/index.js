@@ -1,5 +1,5 @@
 const { RG_API_URL, API_ENDPOINTS, REGIONS, RANKED } = require('../../config/constants')
-const { axios } = require('../')
+const axios = require('axios')
 
 const getLeaguesBySummonerId = async (summonerId = '', region = REGIONS.EUW1) => {
     const uri = `${API_ENDPOINTS.LEAGUE_URI}/entries/by-summoner/${summonerId}`
@@ -33,7 +33,7 @@ const getGrandMasterLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIO
     return data
 }
 
-const getChallengerLeague = async (queue = RANKED.QUEUE.SOLO_SR, region = REGIONS.EUW1) => {
+const getChallengerLeague = async ({ queue = RANKED.QUEUE.SOLO_SR, region = REGIONS.EUW1 }) => {
     const uri = `${API_ENDPOINTS.LEAGUE_URI}/challengerleagues/by-queue/${queue}`
     const url = RG_API_URL(region, uri)
 

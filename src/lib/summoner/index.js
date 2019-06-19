@@ -1,5 +1,5 @@
 const { RG_API_URL, API_ENDPOINTS, REGIONS } = require('../../config/constants')
-const { axios } = require('../')
+const axios = require('axios')
 
 const getSummonerByName = async (name = '', region = REGIONS.EUW1) => {
     const uri = `${API_ENDPOINTS.SUMMONER_URI}/by-name/${name}`

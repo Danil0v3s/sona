@@ -1,5 +1,5 @@
 const { RG_API_URL, API_ENDPOINTS, REGIONS } = require('../../config/constants')
-const { axios } = require('../')
+const axios = require('axios')
 
 const getMatchById = async (matchId = '', region = REGIONS.EUW1) => {
     const uri = `${API_ENDPOINTS.MATCH_URI}/matches/${matchId}`
